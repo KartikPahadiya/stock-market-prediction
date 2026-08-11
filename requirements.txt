@@ -1,0 +1,42 @@
+# AI Stock Prediction System — Pinned Requirements
+# Python 3.12+
+# Install: pip install -r requirements.txt
+
+# --- Core data & computation ---
+numpy==2.5.1
+pandas==3.0.5
+scipy==1.18.0
+scikit-learn==1.9.0
+
+# --- Deep Learning ---
+torch==2.13.0
+
+# --- NLP / Sentiment ---
+transformers==5.14.1
+
+# --- Financial data ---
+yfinance==1.5.2
+pandas-datareader==0.11.1
+pandas_market_calendars==5.4.0
+
+# --- Technical analysis ---
+ta==0.11.0
+
+# --- Boosted trees ---
+xgboost==3.3.0
+
+# --- Statistics ---
+statsmodels==0.14.6
+
+# --- Visualization ---
+matplotlib==3.11.1
+seaborn==0.13.2
+plotly==6.9.0
+
+# --- Dashboard ---
+streamlit==1.61.1
+
+# --- Utilities ---
+joblib==1.5.3
+PyYAML==6.0.3
+requests==2.34.2

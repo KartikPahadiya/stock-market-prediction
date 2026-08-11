@@ -1,0 +1,142 @@
+# ============================================================
+# Northgate Quantitative Research — Capstone Configuration
+# Centralizes all parameters to eliminate hardcoded values.
+# ============================================================
+
+# --- 1. Universe & Dates ---
+universe:
+  tickers:
+    - AAPL
+    - AMZN
+    - GOOGL
+    - JNJ
+    - JPM
+    - META
+    - MSFT
+    - NVDA
+    - PG
+    - XOM
+  start_date: "2017-01-01"
+  end_date: "2026-08-18"
+  benchmark: "SPY"
+
+# --- 2. Data Paths (relative to project root) ---
+paths:
+  raw: "data/raw"
+  processed_stocks: "data/processed/stocks"
+  processed_benchmark: "data/processed/benchmark"
+  processed_features: "data/processed/features"
+  models: "models"
+  reports: "reports"
+  figures: "reports/figures"
+
+# --- 3. Ingestion ---
+ingest:
+  provider: "yahoo"
+  auto_adjust: true
+  min_rows_per_ticker: 100
+
+# --- 4. Cleaning ---
+clean:
+  ffill_limit: 3
+  outlier_z_threshold: 4.0
+  calendar_reindex: true
+
+# --- 5. Sentiment ---
+sentiment:
+  news_provider: "finnhub"
+  api_key_env: "FINNHUB_API_KEY"
+  max_calls_per_minute: 29
+  min_articles_for_meaningful: 20
+  vader_analyzer: "vaderSentiment"
+
+# --- 6. Feature Engineering ---
+features:
+  target_horizon: 1          # days ahead to predict
+  # Price / volume lookbacks
+  sma_windows: [5, 20, 50]
+  ema_windows: [12, 26]
+  bb_window: 20
+  bb_std: 2
+  atr_window: 14
+  volume_ma_window: 20
+  # Momentum
+  rsi_window: 14
+  macd_fast: 12
+  macd_slow: 26
+  macd_signal: 9
+  # Volatility
+  returns_windows: [5, 20, 60]
+  # Sentiment
+  sentiment_rolling_window: 5
+  # Fundamental (placeholder flags)
+  include_fundamental: false
+
+# --- 7. Train / Val / Test Splits ---
+splits:
+  train_ratio: 0.70
+  val_ratio:   0.15
+  test_ratio:  0.15
+  # Walk-forward CV
+  walkforward_n_splits: 3
+
+# --- 8. Reproducibility ---
+reproducibility:
+  random_state: 42
+  torch_deterministic: true
+
+# --- 9. ML Models (single-config quick mode) ---
+ml_quick:
+  Ridge:
+    alpha: 1000
+  RandomForest:
+    n_estimators: 200
+    max_depth: 10
+    n_jobs: -1
+  XGBoost:
+    n_estimators: 100
+    max_depth: 3
+    learning_rate: 0.1
+  SVR:
+    # Excluded from default quick run due to fit time
+    kernel: rbf
+    C: 1.0
+    gamma: scale
+
+# --- 10. DL Models ---
+dl:
+  sequence_length: 60
+  embedding_dim: 8
+  epochs: 50
+  batch_size: 64
+  learning_rate: 0.001
+  patience: 7
+  hidden_units:
+    LSTM: 64
+    BiLSTM: 64
+    GRU: 64
+    Transformer:
+      d_model: 64
+      nhead: 4
+      num_layers: 2
+      dim_feedforward: 128
+
+# --- 11. Portfolio Optimization ---
+portfolio:
+  train_ratio: 0.85
+  backtest_ratio: 0.15
+  max_weight: 0.30
+  risk_free_rate_annual: 0.045
+  n_monte_carlo: 20000
+  strategies:
+    - sharpe_max
+    - min_variance
+    - risk_parity
+    - equal_weight
+    - spy_benchmark
+
+# --- 12. Reporting ---
+reporting:
+  decimal_places: 4
+  fig_dpi: 150
+  fig_format: "png"

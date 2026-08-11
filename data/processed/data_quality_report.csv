@@ -1,0 +1,11 @@
+file,rows_in,rows_out,gaps_remaining,outliers_flagged,ohlc_violations
+AAPL.csv,2413,2413,0,7,0
+AMZN.csv,2413,2413,0,14,0
+GOOGL.csv,2413,2413,0,13,0
+JNJ.csv,2413,2413,0,13,0
+JPM.csv,2413,2413,0,9,0
+META.csv,2413,2413,0,12,0
+MSFT.csv,2413,2413,0,9,0
+NVDA.csv,2413,2413,0,7,0
+PG.csv,2413,2413,4,8,1
+XOM.csv,2413,2413,4,5,1
