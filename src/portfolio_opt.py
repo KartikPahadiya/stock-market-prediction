@@ -437,10 +437,17 @@ def main():
     report_lines.append(f"  Beta (vs SP500):       {bt_sharpe_max['beta']:.4f}")
     report_lines.append(f"  Maximum Drawdown:      {bt_sharpe_max['mdd']*100:.2f}%")
 
-    beat_equal = bt_sharpe_max['total_return'] > bt_equal['total_return']
-    beat_spx = bt_sharpe_max['total_return'] > bt_spx['total_return']
-    report_lines.append(f"\n  Honest assessment: chosen portfolio {'BEAT' if beat_equal else 'DID NOT beat'} "
-                         f"equal-weight out of sample, and {'BEAT' if beat_spx else 'DID NOT beat'} SP500 buy-and-hold.")
+    beat_equal_return = bt_sharpe_max["total_return"] > bt_equal["total_return"]
+    beat_equal_sharpe = bt_sharpe_max["sharpe"] > bt_equal["sharpe"]
+    beat_spx_return = bt_sharpe_max["total_return"] > bt_spx["total_return"]
+    beat_spx_sharpe = bt_sharpe_max["sharpe"] > bt_spx["sharpe"]
+    report_lines.append(
+        "\n  Honest assessment: chosen portfolio "
+        f"{'BEAT' if beat_equal_return else 'DID NOT beat'} equal-weight on total return, "
+        f"{'BEAT' if beat_equal_sharpe else 'DID NOT beat'} equal-weight on Sharpe, "
+        f"{'BEAT' if beat_spx_return else 'DID NOT beat'} SP500 on total return, and "
+        f"{'BEAT' if beat_spx_sharpe else 'DID NOT beat'} SP500 on Sharpe."
+    )
 
     # Backtest growth curve plot
     fig, ax = plt.subplots(figsize=(10, 6))

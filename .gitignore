@@ -42,5 +42,5 @@ env/
 .DS_Store
 Thumbs.db
 
-# Streamlit
-.streamlit/
+# Streamlit secrets (keep out of repo)
+.streamlit/secrets.toml
