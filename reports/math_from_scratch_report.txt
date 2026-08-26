@@ -5,7 +5,7 @@ Math Foundations from Scratch - PRD Section 7
 [1] Gradient Descent Linear Regression
 --------------------------------------------------
 Manual GD:     w = 1.193209,  b = 0.00052495
-Sklearn OLS:   w = 1.195529,  b = 0.00052597
+Sklearn OLS:   w = 1.195528,  b = 0.00052597
 Difference:    Deltaw = 0.00231934,  Deltab = 0.0000010139
 Manual MSE:    0.00015483
 Sklearn MSE:   0.00015483
@@ -23,12 +23,12 @@ Status: PASS - manual GD matches sklearn to within numerical tolerance.
   MSFT  : 0.8776
   NVDA  : 1.1715
   PG    : 0.3882
-  XOM   : 0.4816
+  XOM   : 0.5770
 
 Validation (AAPL):
   Manual:  0.889295
   Numpy:   0.889295
-  Diff:    2.22e-16  - PASS
+  Diff:    0.00e+00  - PASS
 
 [3] Sortino Ratio (annualized, rf=2%)
 --------------------------------------------------
@@ -41,7 +41,7 @@ Validation (AAPL):
   MSFT  : 1.2249
   NVDA  : 1.7188
   PG    : 0.5160
-  XOM   : 0.6744
+  XOM   : 0.8049
 
 [4] Beta (CAPM) - Cov(stock, market) / Var(market)
 --------------------------------------------------
@@ -54,16 +54,16 @@ Validation (AAPL):
   MSFT  : 1.1687  (n=2368 date-matched days)
   NVDA  : 1.8256  (n=2368 date-matched days)
   PG    : 0.4717  (n=2368 date-matched days)
-  XOM   : 0.7453  (n=2317 date-matched days)
+  XOM   : 0.7348  (n=2215 date-matched days)
 
 Validation (AAPL):
-  Manual:  1.195531
-  Numpy:   1.195531
+  Manual:  1.195530
+  Numpy:   1.195530
   Diff:    4.44e-16  - PASS
 
 [5] Maximum Drawdown
 --------------------------------------------------
-  AAPL  : -36.8855%
+  AAPL  : -36.8856%
   AMZN  : -49.6829%
   GOOGL : -40.4706%
   JNJ   : -25.7036%
@@ -72,11 +72,11 @@ Validation (AAPL):
   MSFT  : -33.6433%
   NVDA  : -59.8090%
   PG    : -22.7299%
-  XOM   : -58.1688%
+  XOM   : -59.8713%
 
 Validation (AAPL):
-  Manual:  -0.368855
-  Pandas:  -0.368855
+  Manual:  -0.368856
+  Pandas:  -0.368856
   Diff:    0.00e+00  - PASS
 
 [6] Covariance Matrix (manual, N-1 denominator)
@@ -85,7 +85,7 @@ Date-aligned rows used: 2368
 Tickers used: AAPL, AMZN, GOOGL, JNJ, JPM
 Manual cov shape: (5, 5)
 Numpy cov shape:  (5, 5)
-Max absolute diff: 2.71e-20  - PASS
+Max absolute diff: 0.00e+00  - PASS
 
 Manual covariance matrix (sample):
   AAPL:   0.000350    0.000220    0.000207    0.000066    0.000135
