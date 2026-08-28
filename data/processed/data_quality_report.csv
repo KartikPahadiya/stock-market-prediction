@@ -2,7 +2,7 @@ file,rows_in,rows_out,gaps_remaining,outliers_flagged,ohlc_violations
 MSFT.csv,2418,2418,0,9,0
 AAPL.csv,2418,2418,0,7,0
 JPM.csv,2418,2418,0,9,0
-PG.csv,2418,2418,0,8,0
+PG.csv,2418,2418,4,8,1
 XOM.csv,2418,2418,4,5,1
 GOOGL.csv,2418,2418,0,13,0
 NVDA.csv,2418,2418,0,7,0
