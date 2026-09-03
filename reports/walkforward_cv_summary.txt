@@ -3,6 +3,6 @@ Walk-Forward Cross-Validation Summary
 
 CV splits: 3
 Best params: {'n_estimators': 100, 'max_depth': 5}
-Test RMSE: 0.019239
-Test MAE: 0.013244
-Test DirAcc: 53.4%
+Test RMSE: 0.019254
+Test MAE: 0.013252
+Test DirAcc: 53.3%
