@@ -4,7 +4,7 @@ Math Foundations from Scratch - PRD Section 7
 
 [1] Gradient Descent Linear Regression
 --------------------------------------------------
-Manual GD:     w = 1.193209,  b = 0.00052495
+Manual GD:     w = 1.193210,  b = 0.00052495
 Sklearn OLS:   w = 1.195529,  b = 0.00052597
 Difference:    Deltaw = 0.00231934,  Deltab = 0.0000010139
 Manual MSE:    0.00015483
@@ -23,12 +23,12 @@ Status: PASS - manual GD matches sklearn to within numerical tolerance.
   MSFT  : 0.8776
   NVDA  : 1.1715
   PG    : 0.3882
-  XOM   : 0.4764
+  XOM   : 0.5440
 
 Validation (AAPL):
   Manual:  0.889295
   Numpy:   0.889295
-  Diff:    2.22e-16  - PASS
+  Diff:    1.11e-16  - PASS
 
 [3] Sortino Ratio (annualized, rf=2%)
 --------------------------------------------------
@@ -41,7 +41,7 @@ Validation (AAPL):
   MSFT  : 1.2249
   NVDA  : 1.7188
   PG    : 0.5160
-  XOM   : 0.6677
+  XOM   : 0.7636
 
 [4] Beta (CAPM) - Cov(stock, market) / Var(market)
 --------------------------------------------------
@@ -54,12 +54,12 @@ Validation (AAPL):
   MSFT  : 1.1687  (n=2368 date-matched days)
   NVDA  : 1.8256  (n=2368 date-matched days)
   PG    : 0.4717  (n=2368 date-matched days)
-  XOM   : 0.7461  (n=2368 date-matched days)
+  XOM   : 0.7430  (n=2317 date-matched days)
 
 Validation (AAPL):
   Manual:  1.195531
   Numpy:   1.195531
-  Diff:    4.44e-16  - PASS
+  Diff:    0.00e+00  - PASS
 
 [5] Maximum Drawdown
 --------------------------------------------------
@@ -68,9 +68,9 @@ Validation (AAPL):
   GOOGL : -40.4706%
   JNJ   : -25.7036%
   JPM   : -39.8802%
-  META  : -71.2235%
+  META  : -71.2234%
   MSFT  : -33.6433%
-  NVDA  : -59.8090%
+  NVDA  : -59.8089%
   PG    : -22.7299%
   XOM   : -58.1688%
 
@@ -85,7 +85,7 @@ Date-aligned rows used: 2368
 Tickers used: AAPL, AMZN, GOOGL, JNJ, JPM
 Manual cov shape: (5, 5)
 Numpy cov shape:  (5, 5)
-Max absolute diff: 0.00e+00  - PASS
+Max absolute diff: 2.71e-20  - PASS
 
 Manual covariance matrix (sample):
   AAPL:   0.000350    0.000220    0.000207    0.000066    0.000135
