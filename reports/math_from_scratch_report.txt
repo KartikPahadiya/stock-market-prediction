@@ -4,7 +4,7 @@ Math Foundations from Scratch - PRD Section 7
 
 [1] Gradient Descent Linear Regression
 --------------------------------------------------
-Manual GD:     w = 1.193209,  b = 0.00052495
+Manual GD:     w = 1.193210,  b = 0.00052495
 Sklearn OLS:   w = 1.195529,  b = 0.00052597
 Difference:    Deltaw = 0.00231934,  Deltab = 0.0000010139
 Manual MSE:    0.00015483
@@ -23,7 +23,7 @@ Status: PASS - manual GD matches sklearn to within numerical tolerance.
   MSFT  : 0.8776
   NVDA  : 1.1715
   PG    : 0.3882
-  XOM   : 0.4764
+  XOM   : 0.4687
 
 Validation (AAPL):
   Manual:  0.889295
@@ -41,7 +41,7 @@ Validation (AAPL):
   MSFT  : 1.2249
   NVDA  : 1.7188
   PG    : 0.5160
-  XOM   : 0.6677
+  XOM   : 0.6548
 
 [4] Beta (CAPM) - Cov(stock, market) / Var(market)
 --------------------------------------------------
@@ -54,12 +54,12 @@ Validation (AAPL):
   MSFT  : 1.1687  (n=2368 date-matched days)
   NVDA  : 1.8256  (n=2368 date-matched days)
   PG    : 0.4717  (n=2368 date-matched days)
-  XOM   : 0.7461  (n=2368 date-matched days)
+  XOM   : 0.7443  (n=2317 date-matched days)
 
 Validation (AAPL):
   Manual:  1.195531
   Numpy:   1.195531
-  Diff:    2.22e-16  - PASS
+  Diff:    0.00e+00  - PASS
 
 [5] Maximum Drawdown
 --------------------------------------------------
@@ -72,7 +72,7 @@ Validation (AAPL):
   MSFT  : -33.6433%
   NVDA  : -59.8090%
   PG    : -22.7299%
-  XOM   : -58.1688%
+  XOM   : -60.0269%
 
 Validation (AAPL):
   Manual:  -0.368855
@@ -102,4 +102,4 @@ Equal-weight portfolio of ['AAPL', 'AMZN', 'GOOGL', 'JNJ', 'JPM']
   Numpy portfolio variance:  0.00016544
   Daily std (manual):        0.012862
   Annualized std (manual):   0.2042
-  Diff:                      0.00e+00  - PASS
+  Diff:                      2.71e-20  - PASS
