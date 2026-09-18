@@ -28,7 +28,7 @@ Status: PASS - manual GD matches sklearn to within numerical tolerance.
 Validation (AAPL):
   Manual:  0.889295
   Numpy:   0.889295
-  Diff:    1.11e-16  - PASS
+  Diff:    0.00e+00  - PASS
 
 [3] Sortino Ratio (annualized, rf=2%)
 --------------------------------------------------
@@ -59,7 +59,7 @@ Validation (AAPL):
 Validation (AAPL):
   Manual:  1.195531
   Numpy:   1.195531
-  Diff:    2.22e-16  - PASS
+  Diff:    0.00e+00  - PASS
 
 [5] Maximum Drawdown
 --------------------------------------------------
@@ -70,9 +70,9 @@ Validation (AAPL):
   JPM   : -39.8802%
   META  : -71.2235%
   MSFT  : -33.6433%
-  NVDA  : -59.8089%
+  NVDA  : -59.8090%
   PG    : -22.7299%
-  XOM   : -58.1687%
+  XOM   : -58.1688%
 
 Validation (AAPL):
   Manual:  -0.368855
@@ -85,7 +85,7 @@ Date-aligned rows used: 2368
 Tickers used: AAPL, AMZN, GOOGL, JNJ, JPM
 Manual cov shape: (5, 5)
 Numpy cov shape:  (5, 5)
-Max absolute diff: 6.78e-21  - PASS
+Max absolute diff: 0.00e+00  - PASS
 
 Manual covariance matrix (sample):
   AAPL:   0.000350    0.000220    0.000207    0.000066    0.000135
