@@ -2,10 +2,10 @@ SVR Attempt Summary
 ===================
 
 Model: SVR with RBF kernel, trained in the pooled classical-ML pipeline.
-RMSE: 0.027663
-MAE: 0.021600
-MAPE: 1115.1275
-R2: -1.014440
-Directional accuracy: 49.38%
+RMSE: 0.027679
+MAE: 0.021615
+MAPE: 1113.2040
+R2: -1.016747
+Directional accuracy: 49.44%
 
 Interpretation: SVR is retained for the required four-model classical benchmark, but it is not the winning model on this noisy daily-return task. The final recommendation layer therefore uses the best available cached model outputs rather than privileging SVR.
