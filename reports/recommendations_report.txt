@@ -23,16 +23,16 @@ Methodology:
 ------------------------------------------------------------------------------
 Ticker   Rec       Score  SharpeW   Sharpe      Rel     Sent      Mom
 ------------------------------------------------------------------------------
-NVDA     BUY       1.052    30.0%     1.17    53.5%    0.000    1.070
-MSFT     BUY       0.562    17.6%     0.88    51.3%    0.000    1.100
-JPM      HOLD      0.268    10.0%     0.69    55.7%    0.000    1.023
-XOM      HOLD      0.140     8.6%     0.45    56.4%    0.000    1.029
-AAPL     HOLD     -0.086     3.8%     0.89    54.3%    0.000    0.961
-GOOGL    HOLD     -0.179     0.0%     0.82    52.4%    0.000    0.999
-AMZN     HOLD     -0.228     0.0%     0.68    51.7%    0.000    1.024
-PG       HOLD     -0.283    30.0%     0.39    50.1%    0.000    0.988
-JNJ      SELL     -0.552     0.0%     0.53    50.4%    0.000    1.006
-META     SELL     -0.694     0.0%     0.54    49.5%    0.000    0.992
+NVDA     BUY       1.041    30.0%     1.17    53.2%    0.000    1.070
+MSFT     BUY       0.340     3.4%     0.88    51.4%    0.000    1.100
+JPM      HOLD      0.206     7.6%     0.69    56.0%    0.000    1.023
+XOM      HOLD      0.124     7.8%     0.53    56.3%    0.000    1.029
+AAPL     HOLD     -0.024    14.1%     0.89    53.1%    0.000    0.961
+JNJ      HOLD     -0.052     7.1%     0.53    55.6%    0.000    1.006
+GOOGL    HOLD     -0.253     0.0%     0.82    51.6%    0.000    0.999
+AMZN     HOLD     -0.298     0.0%     0.68    50.9%    0.000    1.024
+PG       SELL     -0.368    30.0%     0.39    48.6%    0.000    0.988
+META     SELL     -0.716     0.0%     0.54    49.0%    0.000    0.992
 
 ======================================================================
 Portfolio Rebalancing Table
@@ -42,16 +42,16 @@ Target = Sharpe-Max optimized weights. Band = 5%.
 
 Ticker      Current     Target      Drift     Action
 ----------------------------------------------------
-AAPL         10.00%      3.83%      6.17%     REDUCE
+AAPL         10.00%     14.10%      4.10%       HOLD
 AMZN         10.00%      0.00%     10.00%     REDUCE
 GOOGL        10.00%      0.00%     10.00%     REDUCE
-JNJ          10.00%      0.00%     10.00%     REDUCE
-JPM          10.00%      9.97%      0.03%       HOLD
+JNJ          10.00%      7.10%      2.90%       HOLD
+JPM          10.00%      7.63%      2.37%       HOLD
 META         10.00%      0.00%     10.00%     REDUCE
-MSFT         10.00%     17.61%      7.61%   INCREASE
+MSFT         10.00%      3.38%      6.62%     REDUCE
 NVDA         10.00%     30.00%     20.00%   INCREASE
 PG           10.00%     30.00%     20.00%   INCREASE
-XOM          10.00%      8.59%      1.41%       HOLD
+XOM          10.00%      7.79%      2.21%       HOLD
 
 ======================================================================
 Detailed Rationales
@@ -60,7 +60,7 @@ Detailed Rationales
 --- NVDA (BUY) ---
 Sharpe-Max portfolio allocates 30.0%, indicating strong optimizer conviction.
 Historical Sharpe: 1.17, Sortino: 1.72, Beta: 1.83.
-Pooled ML+DL historical reliability: 53.5%.
+Pooled ML+DL historical reliability: 53.2%.
 Recent news sentiment: 0.000 (neutral coverage).
 Price is 107.0% of 20-day SMA -- positive short-term momentum.
 
@@ -68,12 +68,12 @@ NOTE: The model signal used here measures historical reliability,
 not the current predicted direction. A genuine live-forecast signal
 would require per-ticker signed predictions exported from the model pipeline.
 
-Composite z-score: 1.052 -> BUY.
+Composite z-score: 1.041 -> BUY.
 
 --- MSFT (BUY) ---
-Sharpe-Max portfolio allocates 17.6%.
+Sharpe-Max portfolio allocates 3.4%.
 Historical Sharpe: 0.88, Sortino: 1.22, Beta: 1.17.
-Pooled ML+DL historical reliability: 51.3%.
+Pooled ML+DL historical reliability: 51.4%.
 Recent news sentiment: 0.000 (neutral coverage).
 Price is 110.0% of 20-day SMA -- positive short-term momentum.
 
@@ -81,12 +81,12 @@ NOTE: The model signal used here measures historical reliability,
 not the current predicted direction. A genuine live-forecast signal
 would require per-ticker signed predictions exported from the model pipeline.
 
-Composite z-score: 0.562 -> BUY.
+Composite z-score: 0.340 -> BUY.
 
 --- JPM (HOLD) ---
-Sharpe-Max portfolio allocates 10.0%.
-Historical Sharpe: 0.69, Sortino: 0.92, Beta: 1.05.
-Pooled ML+DL historical reliability: 55.7% (above-random trust level).
+Sharpe-Max portfolio allocates 7.6%.
+Historical Sharpe: 0.69, Sortino: 0.93, Beta: 1.05.
+Pooled ML+DL historical reliability: 56.0% (above-random trust level).
 Recent news sentiment: 0.000 (neutral coverage).
 Price is near 20-day SMA (102.3%) -- neutral momentum.
 
@@ -94,12 +94,12 @@ NOTE: The model signal used here measures historical reliability,
 not the current predicted direction. A genuine live-forecast signal
 would require per-ticker signed predictions exported from the model pipeline.
 
-Composite z-score: 0.268 -> HOLD.
+Composite z-score: 0.206 -> HOLD.
 
 --- XOM (HOLD) ---
-Sharpe-Max portfolio allocates 8.6%.
-Historical Sharpe: 0.45, Sortino: 0.62, Beta: 0.74.
-Pooled ML+DL historical reliability: 56.4% (above-random trust level).
+Sharpe-Max portfolio allocates 7.8%.
+Historical Sharpe: 0.53, Sortino: 0.75, Beta: 0.74.
+Pooled ML+DL historical reliability: 56.3% (above-random trust level).
 Recent news sentiment: 0.000 (neutral coverage).
 Price is near 20-day SMA (102.9%) -- neutral momentum.
 
@@ -107,12 +107,12 @@ NOTE: The model signal used here measures historical reliability,
 not the current predicted direction. A genuine live-forecast signal
 would require per-ticker signed predictions exported from the model pipeline.
 
-Composite z-score: 0.140 -> HOLD.
+Composite z-score: 0.124 -> HOLD.
 
 --- AAPL (HOLD) ---
-Sharpe-Max portfolio allocates 3.8%.
+Sharpe-Max portfolio allocates 14.1%.
 Historical Sharpe: 0.89, Sortino: 1.22, Beta: 1.20.
-Pooled ML+DL historical reliability: 54.3% (above-random trust level).
+Pooled ML+DL historical reliability: 53.1%.
 Recent news sentiment: 0.000 (neutral coverage).
 Price is near 20-day SMA (96.1%) -- neutral momentum.
 
@@ -120,51 +120,12 @@ NOTE: The model signal used here measures historical reliability,
 not the current predicted direction. A genuine live-forecast signal
 would require per-ticker signed predictions exported from the model pipeline.
 
-Composite z-score: -0.086 -> HOLD.
+Composite z-score: -0.024 -> HOLD.
 
---- GOOGL (HOLD) ---
-Sharpe-Max portfolio allocates only 0.0%, suggesting optimizer avoidance.
-Historical Sharpe: 0.82, Sortino: 1.15, Beta: 1.16.
-Pooled ML+DL historical reliability: 52.4%.
-Recent news sentiment: 0.000 (neutral coverage).
-Price is near 20-day SMA (99.9%) -- neutral momentum.
-
-NOTE: The model signal used here measures historical reliability,
-not the current predicted direction. A genuine live-forecast signal
-would require per-ticker signed predictions exported from the model pipeline.
-
-Composite z-score: -0.179 -> HOLD.
-
---- AMZN (HOLD) ---
-Sharpe-Max portfolio allocates only 0.0%, suggesting optimizer avoidance.
-Historical Sharpe: 0.68, Sortino: 0.99, Beta: 1.18.
-Pooled ML+DL historical reliability: 51.7%.
-Recent news sentiment: 0.000 (neutral coverage).
-Price is near 20-day SMA (102.4%) -- neutral momentum.
-
-NOTE: The model signal used here measures historical reliability,
-not the current predicted direction. A genuine live-forecast signal
-would require per-ticker signed predictions exported from the model pipeline.
-
-Composite z-score: -0.228 -> HOLD.
-
---- PG (HOLD) ---
-Sharpe-Max portfolio allocates 30.0%, indicating strong optimizer conviction.
-Historical Sharpe: 0.39, Sortino: 0.52, Beta: 0.47.
-Pooled ML+DL historical reliability: 50.1% (weak predictive edge).
-Recent news sentiment: 0.000 (neutral coverage).
-Price is near 20-day SMA (98.8%) -- neutral momentum.
-
-NOTE: The model signal used here measures historical reliability,
-not the current predicted direction. A genuine live-forecast signal
-would require per-ticker signed predictions exported from the model pipeline.
-
-Composite z-score: -0.283 -> HOLD.
-
---- JNJ (SELL) ---
-Sharpe-Max portfolio allocates only 0.0%, suggesting optimizer avoidance.
+--- JNJ (HOLD) ---
+Sharpe-Max portfolio allocates 7.1%.
 Historical Sharpe: 0.53, Sortino: 0.70, Beta: 0.44.
-Pooled ML+DL historical reliability: 50.4% (weak predictive edge).
+Pooled ML+DL historical reliability: 55.6% (above-random trust level).
 Recent news sentiment: 0.000 (neutral coverage).
 Price is near 20-day SMA (100.6%) -- neutral momentum.
 
@@ -172,12 +133,51 @@ NOTE: The model signal used here measures historical reliability,
 not the current predicted direction. A genuine live-forecast signal
 would require per-ticker signed predictions exported from the model pipeline.
 
-Composite z-score: -0.552 -> SELL.
+Composite z-score: -0.052 -> HOLD.
+
+--- GOOGL (HOLD) ---
+Sharpe-Max portfolio allocates only 0.0%, suggesting optimizer avoidance.
+Historical Sharpe: 0.82, Sortino: 1.15, Beta: 1.16.
+Pooled ML+DL historical reliability: 51.6%.
+Recent news sentiment: 0.000 (neutral coverage).
+Price is near 20-day SMA (99.9%) -- neutral momentum.
+
+NOTE: The model signal used here measures historical reliability,
+not the current predicted direction. A genuine live-forecast signal
+would require per-ticker signed predictions exported from the model pipeline.
+
+Composite z-score: -0.253 -> HOLD.
+
+--- AMZN (HOLD) ---
+Sharpe-Max portfolio allocates only 0.0%, suggesting optimizer avoidance.
+Historical Sharpe: 0.68, Sortino: 0.99, Beta: 1.18.
+Pooled ML+DL historical reliability: 50.9% (weak predictive edge).
+Recent news sentiment: 0.000 (neutral coverage).
+Price is near 20-day SMA (102.4%) -- neutral momentum.
+
+NOTE: The model signal used here measures historical reliability,
+not the current predicted direction. A genuine live-forecast signal
+would require per-ticker signed predictions exported from the model pipeline.
+
+Composite z-score: -0.298 -> HOLD.
+
+--- PG (SELL) ---
+Sharpe-Max portfolio allocates 30.0%, indicating strong optimizer conviction.
+Historical Sharpe: 0.39, Sortino: 0.52, Beta: 0.47.
+Pooled ML+DL historical reliability: 48.6% (weak predictive edge).
+Recent news sentiment: 0.000 (neutral coverage).
+Price is near 20-day SMA (98.8%) -- neutral momentum.
+
+NOTE: The model signal used here measures historical reliability,
+not the current predicted direction. A genuine live-forecast signal
+would require per-ticker signed predictions exported from the model pipeline.
+
+Composite z-score: -0.368 -> SELL.
 
 --- META (SELL) ---
 Sharpe-Max portfolio allocates only 0.0%, suggesting optimizer avoidance.
 Historical Sharpe: 0.54, Sortino: 0.69, Beta: 1.32.
-Pooled ML+DL historical reliability: 49.5% (weak predictive edge).
+Pooled ML+DL historical reliability: 49.0% (weak predictive edge).
 Recent news sentiment: 0.000 (neutral coverage).
 Price is near 20-day SMA (99.2%) -- neutral momentum.
 
@@ -185,7 +185,7 @@ NOTE: The model signal used here measures historical reliability,
 not the current predicted direction. A genuine live-forecast signal
 would require per-ticker signed predictions exported from the model pipeline.
 
-Composite z-score: -0.694 -> SELL.
+Composite z-score: -0.716 -> SELL.
 
 ======================================================================
 Summary Counts

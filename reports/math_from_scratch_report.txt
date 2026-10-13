@@ -18,12 +18,12 @@ Status: PASS - manual GD matches sklearn to within numerical tolerance.
   AMZN  : 0.6830
   GOOGL : 0.8203
   JNJ   : 0.5325
-  JPM   : 0.6854
+  JPM   : 0.6899
   META  : 0.5382
   MSFT  : 0.8776
   NVDA  : 1.1715
   PG    : 0.3882
-  XOM   : 0.4472
+  XOM   : 0.5318
 
 Validation (AAPL):
   Manual:  0.889295
@@ -36,12 +36,12 @@ Validation (AAPL):
   AMZN  : 0.9938
   GOOGL : 1.1487
   JNJ   : 0.7014
-  JPM   : 0.9248
+  JPM   : 0.9301
   META  : 0.6942
   MSFT  : 1.2249
   NVDA  : 1.7188
   PG    : 0.5160
-  XOM   : 0.6246
+  XOM   : 0.7475
 
 [4] Beta (CAPM) - Cov(stock, market) / Var(market)
 --------------------------------------------------
@@ -49,12 +49,12 @@ Validation (AAPL):
   AMZN  : 1.1842  (n=2368 date-matched days)
   GOOGL : 1.1599  (n=2368 date-matched days)
   JNJ   : 0.4367  (n=2368 date-matched days)
-  JPM   : 1.0497  (n=2317 date-matched days)
+  JPM   : 1.0510  (n=2368 date-matched days)
   META  : 1.3185  (n=2368 date-matched days)
   MSFT  : 1.1687  (n=2368 date-matched days)
   NVDA  : 1.8256  (n=2368 date-matched days)
   PG    : 0.4717  (n=2368 date-matched days)
-  XOM   : 0.7430  (n=2266 date-matched days)
+  XOM   : 0.7429  (n=2296 date-matched days)
 
 Validation (AAPL):
   Manual:  1.195530
@@ -67,12 +67,12 @@ Validation (AAPL):
   AMZN  : -49.6829%
   GOOGL : -40.4706%
   JNJ   : -25.7036%
-  JPM   : -38.8236%
+  JPM   : -39.8802%
   META  : -71.2235%
   MSFT  : -33.6433%
   NVDA  : -59.8089%
   PG    : -22.7299%
-  XOM   : -62.5494%
+  XOM   : -58.1688%
 
 Validation (AAPL):
   Manual:  -0.368855
@@ -81,25 +81,25 @@ Validation (AAPL):
 
 [6] Covariance Matrix (manual, N-1 denominator)
 --------------------------------------------------
-Date-aligned rows used: 2317
+Date-aligned rows used: 2368
 Tickers used: AAPL, AMZN, GOOGL, JNJ, JPM
 Manual cov shape: (5, 5)
 Numpy cov shape:  (5, 5)
-Max absolute diff: 5.42e-20  - PASS
+Max absolute diff: 0.00e+00  - PASS
 
 Manual covariance matrix (sample):
-  AAPL:   0.000353    0.000225    0.000211    0.000066    0.000136
-  AMZN:   0.000225    0.000455    0.000263    0.000035    0.000115
-  GOOGL:   0.000211    0.000263    0.000367    0.000054    0.000133
-  JNJ:   0.000066    0.000035    0.000054    0.000147    0.000070
-  JPM:   0.000136    0.000115    0.000133    0.000070    0.000311
+  AAPL:   0.000350    0.000220    0.000207    0.000066    0.000135
+  AMZN:   0.000220    0.000450    0.000258    0.000034    0.000113
+  GOOGL:   0.000207    0.000258    0.000362    0.000053    0.000131
+  JNJ:   0.000066    0.000034    0.000053    0.000144    0.000069
+  JPM:   0.000135    0.000113    0.000131    0.000069    0.000307
 
 [7] Portfolio Variance (w^T Sigma w)
 --------------------------------------------------
 Equal-weight portfolio of ['AAPL', 'AMZN', 'GOOGL', 'JNJ', 'JPM']
   Weights: [0.2 0.2 0.2 0.2 0.2]
-  Manual portfolio variance: 0.00016995
-  Numpy portfolio variance:  0.00016995
-  Daily std (manual):        0.013036
-  Annualized std (manual):   0.2069
-  Diff:                      2.71e-20  - PASS
+  Manual portfolio variance: 0.00016739
+  Numpy portfolio variance:  0.00016739
+  Daily std (manual):        0.012938
+  Annualized std (manual):   0.2054
+  Diff:                      0.00e+00  - PASS
