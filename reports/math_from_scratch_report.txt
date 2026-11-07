@@ -28,7 +28,7 @@ Status: PASS - manual GD matches sklearn to within numerical tolerance.
 Validation (AAPL):
   Manual:  0.889295
   Numpy:   0.889295
-  Diff:    2.22e-16  - PASS
+  Diff:    3.33e-16  - PASS
 
 [3] Sortino Ratio (annualized, rf=2%)
 --------------------------------------------------
@@ -59,7 +59,7 @@ Validation (AAPL):
 Validation (AAPL):
   Manual:  1.195530
   Numpy:   1.195530
-  Diff:    4.44e-16  - PASS
+  Diff:    6.66e-16  - PASS
 
 [5] Maximum Drawdown
 --------------------------------------------------
@@ -70,7 +70,7 @@ Validation (AAPL):
   JPM   : -39.8802%
   META  : -71.2235%
   MSFT  : -33.6433%
-  NVDA  : -59.8090%
+  NVDA  : -59.8089%
   PG    : -22.7299%
   XOM   : -58.1688%
 
