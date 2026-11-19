@@ -4,82 +4,82 @@ Portfolio Optimization - PRD Section 11
 
 Dataset:
   Tickers: AAPL, AMZN, GOOGL, JNJ, JPM, META, MSFT, NVDA, PG, XOM
-  Total date-aligned trading days: 2266
-  Train window:    2017-03-15 to 2025-04-07  (n=1926)
-  Backtest window: 2025-04-08 to 2026-08-14  (n=340, held out -- never used to estimate mu/Sigma)
+  Total date-aligned trading days: 2215
+  Train window:    2017-03-15 to 2025-04-16  (n=1882)
+  Backtest window: 2025-04-17 to 2026-08-14  (n=333, held out -- never used to estimate mu/Sigma)
 
 Annualized Expected Returns (historical mean, TRAIN window only):
-  AAPL  : 0.2498  (24.98%)
-  AMZN  : 0.2387  (23.87%)
-  GOOGL : 0.2197  (21.97%)
-  JNJ   : 0.0833  (8.33%)
-  JPM   : 0.1840  (18.40%)
-  META  : 0.2449  (24.49%)
-  MSFT  : 0.2688  (26.88%)
-  NVDA  : 0.6005  (60.05%)
-  PG    : 0.1311  (13.11%)
-  XOM   : 0.1268  (12.68%)
+  AAPL  : 0.2507  (25.07%)
+  AMZN  : 0.1889  (18.89%)
+  GOOGL : 0.1920  (19.20%)
+  JNJ   : 0.0733  (7.33%)
+  JPM   : 0.1707  (17.07%)
+  META  : 0.2418  (24.18%)
+  MSFT  : 0.2448  (24.48%)
+  NVDA  : 0.5455  (54.55%)
+  PG    : 0.1395  (13.95%)
+  XOM   : 0.1551  (15.51%)
 
-Covariance: Ledoit-Wolf shrinkage, shrinkage intensity = 0.0100
+Covariance: Ledoit-Wolf shrinkage, shrinkage intensity = 0.0102
   (0 = no shrinkage/raw sample Sigma, 1 = fully shrunk to diagonal target)
 Per-asset weight cap: 30%
 
 [1] Equal-Weight Portfolio
 --------------------------------------------------
-  Expected Return:  0.2348  (23.48%)
-  Volatility:       0.2169  (21.69%)
-  Sharpe Ratio:     0.9903
+  Expected Return:  0.2202  (22.02%)
+  Volatility:       0.2225  (22.25%)
+  Sharpe Ratio:     0.8997
 
 [2] Minimum-Variance Portfolio
 --------------------------------------------------
   Weights:
     AAPL  : 0.0000  (0.00%)
-    AMZN  : 0.1130  (11.30%)
-    GOOGL : 0.0668  (6.68%)
+    AMZN  : 0.1013  (10.13%)
+    GOOGL : 0.0706  (7.06%)
     JNJ   : 0.3000  (30.00%)
-    JPM   : 0.0509  (5.09%)
-    META  : 0.0026  (0.26%)
-    MSFT  : 0.0110  (1.10%)
+    JPM   : 0.0528  (5.28%)
+    META  : 0.0000  (0.00%)
+    MSFT  : 0.0161  (1.61%)
     NVDA  : 0.0000  (0.00%)
     PG    : 0.3000  (30.00%)
-    XOM   : 0.1557  (15.57%)
-  Expected Return:  0.1387  (13.87%)
-  Volatility:       0.1611  (16.11%)
-  Sharpe Ratio:     0.7369
+    XOM   : 0.1592  (15.92%)
+  Expected Return:  0.1342  (13.42%)
+  Volatility:       0.1634  (16.34%)
+  Sharpe Ratio:     0.6989
 
 [3] Sharpe-Maximizing Portfolio  <-- chosen portfolio
 --------------------------------------------------
   Weights:
-    AAPL  : 0.0328  (3.28%)
+    AAPL  : 0.1106  (11.06%)
     AMZN  : 0.0000  (0.00%)
     GOOGL : 0.0000  (0.00%)
-    JNJ   : 0.0370  (3.70%)
-    JPM   : 0.0921  (9.21%)
+    JNJ   : 0.0000  (0.00%)
+    JPM   : 0.0176  (1.76%)
     META  : 0.0000  (0.00%)
-    MSFT  : 0.2002  (20.02%)
+    MSFT  : 0.1049  (10.49%)
     NVDA  : 0.3000  (30.00%)
     PG    : 0.3000  (30.00%)
-    XOM   : 0.0378  (3.78%)
-  Expected Return (in-sample):  0.3063  (30.63%)
-  Volatility (in-sample):       0.2440  (24.40%)
-  Sharpe Ratio (in-sample):     1.1733
+    XOM   : 0.1670  (16.70%)
+  Expected Return (in-sample):  0.2878  (28.78%)
+  Volatility (in-sample):       0.2464  (24.64%)
+  Sharpe Ratio (in-sample):     1.0871
 
 [4] Risk-Parity Portfolio
 --------------------------------------------------
   Weights:
-    AAPL  : 0.0802  (8.02%)
-    AMZN  : 0.0801  (8.01%)
-    GOOGL : 0.0812  (8.12%)
-    JNJ   : 0.1732  (17.32%)
+    AAPL  : 0.0792  (7.92%)
+    AMZN  : 0.0783  (7.83%)
+    GOOGL : 0.0808  (8.08%)
+    JNJ   : 0.1759  (17.59%)
     JPM   : 0.0976  (9.76%)
-    META  : 0.0689  (6.89%)
-    MSFT  : 0.0816  (8.16%)
-    NVDA  : 0.0547  (5.47%)
-    PG    : 0.1668  (16.68%)
-    XOM   : 0.1158  (11.58%)
-  Expected Return:  0.1976  (19.76%)
-  Volatility:       0.1885  (18.85%)
-  Sharpe Ratio:     0.9422
+    META  : 0.0680  (6.80%)
+    MSFT  : 0.0811  (8.11%)
+    NVDA  : 0.0543  (5.43%)
+    PG    : 0.1688  (16.88%)
+    XOM   : 0.1161  (11.61%)
+  Expected Return:  0.1872  (18.72%)
+  Volatility:       0.1921  (19.21%)
+  Sharpe Ratio:     0.8704
 
 [5] Efficient Frontier + Monte Carlo Cross-Check
 --------------------------------------------------
@@ -93,18 +93,18 @@ no re-estimation) and applied to realized backtest-window returns.
 
 Strategy                 TotalRet    AnnVol   Sharpe   Sortino    Beta     MaxDD
 ------------------------------------------------------------------------------
-Sharpe-Max (chosen)        59.58%    17.22%   1.8950    3.3153  0.9174   -11.78%
-Equal-Weight               69.44%    16.14%   2.2973    3.8582  0.9144    -8.69%
-SP500 Buy-and-Hold         53.80%    15.63%   1.9131    2.9741  1.0000    -9.10%
+Sharpe-Max (chosen)        52.35%    13.28%   2.2479    3.5047  0.7274    -8.13%
+Equal-Weight               62.73%    13.19%   2.6423    4.1889  0.8419    -8.69%
+SP500 Buy-and-Hold         47.58%    13.01%   2.1096    3.0378  1.0000    -9.10%
 
 Section 11.4 risk report -- chosen (Sharpe-Max) portfolio, OUT OF SAMPLE:
-  Sharpe Ratio:          1.8950
-  Sortino Ratio:         3.3153
-  Annualized Volatility: 0.1722  (17.22%)
-  Beta (vs SP500):       0.9174
-  Maximum Drawdown:      -11.78%
+  Sharpe Ratio:          2.2479
+  Sortino Ratio:         3.5047
+  Annualized Volatility: 0.1328  (13.28%)
+  Beta (vs SP500):       0.7274
+  Maximum Drawdown:      -8.13%
 
-  Honest assessment: chosen portfolio DID NOT beat equal-weight on total return, DID NOT beat equal-weight on Sharpe, BEAT SP500 on total return, and DID NOT beat SP500 on Sharpe.
+  Honest assessment: chosen portfolio DID NOT beat equal-weight on total return, DID NOT beat equal-weight on Sharpe, BEAT SP500 on total return, and BEAT SP500 on Sharpe.
 
   Backtest plot saved to: /home/runner/work/stock-market-prediction/stock-market-prediction/reports/portfolio_backtest.png
 
@@ -113,7 +113,7 @@ Summary Comparison (in-sample / train window)
 ======================================================================
 Strategy               Return   Volatility     Sharpe
 ----------------------------------------------------
-Equal-Weight           0.2348       0.2169     0.9903
-Min-Variance           0.1387       0.1611     0.7369
-Sharpe-Max             0.3063       0.2440     1.1733
-Risk-Parity            0.1976       0.1885     0.9422
+Equal-Weight           0.2202       0.2225     0.8997
+Min-Variance           0.1342       0.1634     0.6989
+Sharpe-Max             0.2878       0.2464     1.0871
+Risk-Parity            0.1872       0.1921     0.8704
